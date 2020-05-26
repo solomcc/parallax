@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<html>
+
+<head>
+    <script src="rellax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            /* background: #fff; */
+            height: 300vh;
+            color: #fff;
+        }
+
+        .content {
+            align-items: center;
+            display: flex;
+            height: 300px;
+            justify-content: center;
+            /* margin: 0;
+            max-width: 100%;
+            width: 100vw; */
+                background: rgba(255,255,255,0.86);
+    margin: 80px 97px;
+    overflow: visible;
+
+        }
+
+        div {
+            background: #333;
+            font-size: 30px;
+            font-weight: bold;
+            height: 200px;
+            line-height: 200px;
+            margin: 1em;
+            text-align: center;
+            width: 300px;
+        }
+
+        .one {
+            background-color: #EC368D;
+        }
+
+        .two {
+            background-color: #333;
+        }
+
+        .bgImage {
+            position: absolute;
+            z-index: -1;
+            height: 4800px; 
+            width: 100vw; 
+            /* transform: translate(50%, 50%); */
+            /* top: 0px; */
+            left: 0px;
+            background-image: url('nightImg.jpeg');
+            background-position: bottom;
+        }
+        .bgPattern {
+            position: absolute;
+            z-index: -1;
+            height: 4800px; 
+            width: 100vw; 
+            background:
+linear-gradient(135deg, transparent 21px, rgba(1,1,1,0.1) 22px, rgba(1,1,1,0.1) 24px, transparent 24px, transparent 67px, rgba(1,1,1,0.1) 67px, rgba(1,1,1,0.1) 69px, transparent 69px),
+linear-gradient(225deg, transparent 21px, rgba(1,1,1,0.1) 22px, rgba(1,1,1,0.1) 24px, transparent 24px, transparent 67px, rgba(1,1,1,0.1) 67px, rgba(1,1,1,0.1) 69px, transparent 69px)0 64px;
+/* background-color:#708090; */
+background-size: 64px 128px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <article class="content">
+        <div class="one" data-rellax-speed="1800">Faster</div>
+        <div class="two rellax" data-rellax-speed="5">No parallax</div>
+        <div class="bgImage rellax" data-rellax-speed="-20">Slower</div>
+        <!-- <div class="bgPattern"></div> -->
+        <!-- <div class="bgImage rellax" data-rellax-speed="-10">Slower</div> -->
+        <div class="three rellax" data-rellax-speed="10">No parallax</div>
+
+    </article>
+    <article class="content">
+        <div class="one" data-rellax-speed="1800">Faster</div>
+        <div class="two">No parallax</div>
+        <!-- <div class="bgImage rellax" data-rellax-percentage="3" data-rellax-speed="5" data-rellax-zindex="5">Slower</div> -->
+        <div class="three rellax" data-rellax-speed="10">No parallax</div>
+
+    </article>
+    <article class="content">
+        <div class="one" data-rellax-speed="1800">Faster</div>
+        <div class="two">No parallax</div>
+        <!-- <div class="bgImage rellax" data-rellax-percentage="3" data-rellax-speed="5" data-rellax-zindex="5">Slower</div> -->
+        <div class="three">No parallax</div>
+
+    </article>
+    <article class="content">
+        <div class="one" data-rellax-speed="1800">Faster</div>
+        <div class="two">No parallax</div>
+        <!-- <div class="bgImage rellax" data-rellax-percentage="3" data-rellax-speed="5" data-rellax-zindex="5">Slower</div> -->
+        <div class="three">No parallax</div>
+
+    </article>
+
+</body>
+<script>
+    var rellax = new Rellax('.rellax', {
+    // speed: 400,
+    // center: true,
+    // wrapper: null,
+    // round: true,
+    vertical: true,
+    // horizontal: false
+  });
+    document.onscroll = function() {
+        $(".rellax").css('transform',"translate3d(0px, 3px, 0px)");
+    }
+</script>
+
+</html>
